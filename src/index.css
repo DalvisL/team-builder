@@ -56,9 +56,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: aliceblue;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  padding: 20px 0;
+  background: royalblue;
+  color: white;
 }

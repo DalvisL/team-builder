@@ -3,9 +3,37 @@ import {useState} from 'react';
 import  styled from 'styled-components'
 
 const MembersList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin: 20px 0;
+ 
   .member {
-    border: solid red 3px;
- }
+    border: solid grey 3px;
+    border-radius: 10px;
+    width: 40vw;
+    background: white;
+    h3 {
+      font-size: 3rem;
+    }
+    h4 {
+      font-size: 2.5rem;
+    }
+  }
+
+.member-info {
+  margin: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  span {
+    color: grey;
+  }
+}
+`
+const AddMemberForm = styled.div`
+
 `
 const teamMemberList = [
   {
@@ -42,17 +70,21 @@ function App() {
           
           return(
             <div className='member' key={index}>
-              <div className='member-name'>
-                <h3>Name: {member.name}</h3>
-              </div>
               <div className='member-info'>
-                <h4>Age: {member.age}</h4>
-                <h4>Occupation: {member.occupation}</h4>
+                <div className='member-name'>
+                  <h3>{member.name}</h3>
+                  <hr></hr>
+                </div>
+                <div className='adt-info'>
+                  <h4>Age: <span>{member.age}</span></h4>
+                  <h4>Occupation: <span>{member.occupation}</span></h4>
+                </div>  
               </div>
             </div>
           )
         })}
       </MembersList>
+      <AddMemberForm></AddMemberForm>
     </div>
   );
 }
