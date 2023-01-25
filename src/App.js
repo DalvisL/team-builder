@@ -70,22 +70,15 @@ function App() {
     <div className="App">
       <h1>Members</h1>
       {modalOpen && <Form 
-        state={{
-          'modalOpen': modalOpen, 
-          'formData': formData,
-          'teamMembers': teamMembers
-        }}
-        handlers={{
-          'setModalOpen': setModalOpen,
-          'setFormData': setFormData,
-          'setTeamMembers': setTeamMembers
-        }}
+        formData={formData}
+        setFormData={setFormData}
+        teamMembers={teamMembers}
+        setTeamMembers={setTeamMembers}
+        setModalOpen={setModalOpen}
       />}
       <MembersList>
         {teamMembers.map( (member, index) => {
-          
           return(
-            
             <div className='member' key={index}>
               <div className='member-info'>
                 <div className='member-name'>
